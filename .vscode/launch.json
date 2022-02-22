@@ -15,19 +15,6 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
-        },
-        {
-            "name": "heart_example",
-            "cwd": "heart_example",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "heart_example (profile mode)",
-            "cwd": "heart_example",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
         }
     ]
 }

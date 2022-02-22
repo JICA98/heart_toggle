@@ -1,6 +1,8 @@
 # heart_toggle
 
-A new Flutter package project.
+A new Flutter package for heart shapped toggle.
+
+
 
 ## Getting Started
 

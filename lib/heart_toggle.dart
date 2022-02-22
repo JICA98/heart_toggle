@@ -25,7 +25,7 @@ class HeartToggleProps {
   final bool isActive;
 
   const HeartToggleProps({
-    this.isActive = true,
+    this.isActive = false,
     this.activeFillColor = const Color(0xfffe8da5),
     this.activeStrokeColor = const Color(0xffe75776),
     this.passiveFillColor = Colors.white54,
