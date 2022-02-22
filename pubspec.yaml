@@ -1,7 +1,7 @@
 name: heart_toggle
-description: A new Flutter package project.
+description: A new Flutter package with a heart toggle.
 version: 0.0.1
-homepage:
+homepage: https://github.com/JICA98/heart_toggle
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
