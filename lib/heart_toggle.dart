@@ -2,6 +2,7 @@ library heart_toggle;
 
 import 'package:flutter/material.dart';
 
+/// Properties for the heart toggle widget.
 class HeartToggleProps {
   // Heart Properties
   final Color activeFillColor;
@@ -24,6 +25,37 @@ class HeartToggleProps {
   final VoidCallback? onTap;
   final bool isActive;
 
+  /// Properties of the heart toggle widget with their default values and description.
+  ///
+  /// `isActive`: Whether the heart is active or not.
+  ///
+  /// `onTap`: *null* : Function to be called when the heart is toggled.
+  ///
+  /// `activeFillColor`: *const Color(0xfffe8da5)* : Color of the heart when it is active.
+  ///
+  /// `activeStrokeColor`: *const Color(0xffe75776)* : Color of the stroke when the heart is active.
+  ///
+  /// `passiveFillColor`: *Colors.white54* : Color of the heart when it is inactive.
+  ///
+  /// `passiveStrokeColor`: *Colors.grey* : Color of the stroke when the heart is inactive.
+  ///
+  /// `size`: *40.0* : Size of the heart.
+  ///
+  /// `strokeWidth`: *2.0* : Width of the stroke. (40 / 20)
+  ///
+  /// `ballElevation`: *4.0* : Elevation of the ball.
+  ///
+  /// `ballColor`: *Colors.white* : Color of the ball.
+  ///
+  /// `heartElevation`: *null* : Elevation of the heart.
+  ///
+  /// `heartShadowColor`: *Colors.grey* : Color of the shadow of the heart.
+  ///
+  /// `ballShadowColor`: *Colors.grey* : Color of the shadow of the ball.
+  ///
+  /// `duration`: *const Duration(milliseconds: 250)* : Duration of the animation.
+  ///
+  /// `onChanged`: Function to be called when the heart is toggled. This function is called with a bool parameter.
   const HeartToggleProps({
     this.isActive = false,
     this.activeFillColor = const Color(0xfffe8da5),
@@ -43,8 +75,13 @@ class HeartToggleProps {
   });
 }
 
+/// Heart toggle widget.
 class HeartToggle extends StatefulWidget {
   final HeartToggleProps props;
+
+  /// Heart toggle widget.
+  ///
+  /// [props] : Properties of the heart toggle widget.
   const HeartToggle({Key? key, this.props = const HeartToggleProps()})
       : super(key: key);
 
