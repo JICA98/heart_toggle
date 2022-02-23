@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text('Heart Toggle Demo'),
         ),
         body: Center(
           child: HeartToggle(
             props: HeartToggleProps(
-              size: 60.0,
+              size: 260.0,
               passiveFillColor: Colors.grey[200]!,
               ballElevation: 4.0,
               heartElevation: 4.0,

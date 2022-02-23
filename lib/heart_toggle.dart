@@ -126,6 +126,17 @@ class _HeartToggleState extends State<HeartToggle>
           _toggleYCntrllr.reverse();
         }
       });
+
+    Future.doWhile(() async {
+      if (_toggled) {
+        _controller.forward();
+        _toggleYCntrllr.forward();
+      } else {
+        _controller.reverse();
+        _toggleYCntrllr.reverse();
+      }
+      return _toggled;
+    });
   }
 
   @override
