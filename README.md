@@ -45,4 +45,4 @@ A Flutter package for heart shapped toggle.
  
 ###### Finally
 *This package is inspired from the 
-heart-switch react component. Make sure to check it out [here.]([https://link](https://github.com/anatoliygatt/heart-switch))*
+heart-switch react component. Make sure to check it out [here.](https://github.com/anatoliygatt/heart-switch)*
