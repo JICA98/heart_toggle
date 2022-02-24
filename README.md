@@ -50,5 +50,6 @@ A Flutter package for heart shapped toggle.
 - `duration` : `const Duration(milliseconds: 300)`
  
 ###### Finally
-*This package is inspired from the 
+- *This package is inspired from the 
 heart-switch react component. Make sure to check it out [here.](https://github.com/anatoliygatt/heart-switch)*
+- *You can check the original dribble concept [here.](https://dribbble.com/shots/8306407-I-heart-toggle)*

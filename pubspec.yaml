@@ -1,6 +1,6 @@
 name: heart_toggle
 description: A Flutter package with a heart shapped toggle. Inspired from a react component and dribble.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/JICA98/heart_toggle
 
 environment:
