@@ -53,7 +53,7 @@ class HeartToggleProps {
   ///
   /// `ballShadowColor`: *Colors.grey* : Color of the shadow of the ball.
   ///
-  /// `duration`: *const Duration(milliseconds: 250)* : Duration of the animation.
+  /// `duration`: *const Duration(milliseconds: 300)* : Duration of the animation.
   ///
   /// `onChanged`: Function to be called when the heart is toggled. This function is called with a bool parameter.
   const HeartToggleProps({
@@ -71,7 +71,7 @@ class HeartToggleProps {
     this.heartElevation,
     this.heartShadowColor = Colors.grey,
     this.ballShadowColor = Colors.grey,
-    this.duration = const Duration(milliseconds: 250),
+    this.duration = const Duration(milliseconds: 300),
   });
 }
 
@@ -124,8 +124,8 @@ class _HeartToggleState extends State<HeartToggle>
     _endStrokeColor = _toggled
         ? widget.props.passiveStrokeColor
         : widget.props.activeStrokeColor;
-    _beginXPos = _toggled ? 0.72 : 0.28;
-    _endXPos = _toggled ? 0.28 : 0.72;
+    _beginXPos = _toggled ? 0.725 : 0.288;
+    _endXPos = _toggled ? 0.288 : 0.725;
   }
 
   void _initAnimations() {
@@ -155,25 +155,14 @@ class _HeartToggleState extends State<HeartToggle>
     ).animate(_controller);
 
     _toggleYAnim = Tween<double>(
-      begin: .423,
-      end: .610,
+      begin: .426,
+      end: .580,
     ).animate(_toggleYCntrllr)
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           _toggleYCntrllr.reverse();
         }
       });
-
-    Future.doWhile(() async {
-      if (_toggled) {
-        _controller.forward();
-        _toggleYCntrllr.forward();
-      } else {
-        _controller.reverse();
-        _toggleYCntrllr.reverse();
-      }
-      return _toggled;
-    });
   }
 
   @override
@@ -209,7 +198,7 @@ class _HeartToggleState extends State<HeartToggle>
       onTap: _onTap,
       child: SizedBox(
         height: widget.props.size,
-        width: widget.props.size * 1.4,
+        width: widget.props.size * 1.5,
         child: CustomPaint(
           foregroundPainter: _ToggleBallPainter(
             xOffset: _toggleXAnim.value,
@@ -254,7 +243,7 @@ class _ToggleBallPainter extends CustomPainter {
     final h = size.height;
     final w = size.width;
     final center = Offset(w * xOffset, h * yOffset);
-    final radius = size.width / 4.48;
+    final radius = size.width / 3.9;
     final path = Path()..addOval(ovalRectFrom(center, radius));
     if (elevation != null) {
       canvas.drawShadow(path, shadowColor, elevation!, false);
@@ -296,14 +285,17 @@ class _HeartShapePainter extends CustomPainter {
     final fillPaint = Paint()
       ..color = fillColor
       ..style = PaintingStyle.fill;
-    final h = size.height;
-    final w = size.width;
+    final y = size.height;
+    final x = size.width;
     final path = Path();
     path
-      ..moveTo(0.5 * w, 0.25 * h)
-      ..cubicTo(w * 0.15, h * -.25, w * -.35, h * 0.6, w * 0.5, h)
-      ..moveTo(0.5 * w, 0.25 * h)
-      ..cubicTo(w * .85, h * -.25, w * 1.35, h * 0.6, w * 0.5, h);
+      ..moveTo(0.723 * x, 0.02 * y)
+      ..cubicTo(0.876 * x, 0.02 * y, x, 0.201 * y, x, 0.422 * y)
+      ..cubicTo(x, 0.753 * y, 0.66 * x, y, 0.507 * x, y)
+      ..cubicTo(0.354 * x, y, 0.015 * x, 0.754 * y, 0.015 * x, 0.422 * y)
+      ..cubicTo(0.015 * x, 0.201 * y, 0.139 * x, 0.02 * y, 0.292 * x, 0.02 * y)
+      ..cubicTo(0.379 * x, 0.02 * y, 0.456 * x, 0.08 * y, 0.507 * x, 0.17 * y)
+      ..cubicTo(0.558 * x, 0.08 * y, 0.636 * x, 0.02 * y, 0.723 * x, 0.02 * y);
     if (elevation != null) {
       canvas.drawShadow(path, shadowColor, elevation!, false);
     }

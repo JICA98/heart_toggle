@@ -2,7 +2,13 @@
 
 A Flutter package for heart shapped toggle.
 
-![0](example.gif)
+<br>
+
+<div align="center">
+  <img src="https://i.imgur.com/Vb0811z.gif" alt="heart_toggle Demo">
+</div>
+
+<br>
 
 ###  Getting Started
 
@@ -32,7 +38,7 @@ A Flutter package for heart shapped toggle.
 - `activeStrokeColor` : `0xffe75776` (Dark pink, probably)
 - `passiveFillColor` : `Colors.white54`
 - `passiveStrokeColor` : `Colors.grey`
-- `size` : `40` ( 40 is taken as the height and 40 x 1.4 is width)
+- `size` : `40` ( 40 is taken as the height and 40 x 1.5 is width)
 - `strokeWidth` : `'size' / 20` (Eg: 40/20 = 2)
 - `onTap` : `null`
 - `onChanged` : `null`
@@ -41,7 +47,7 @@ A Flutter package for heart shapped toggle.
 - `heartShadowColor` : `Colors.grey` (only applicable when '`heartElevation`' is not null)
 - `ballElevation` : `4.0`,
 - `ballShadowColor` : `Colors.grey`
-- `duration` : `const Duration(milliseconds: 250)`
+- `duration` : `const Duration(milliseconds: 300)`
  
 ###### Finally
 *This package is inspired from the 
